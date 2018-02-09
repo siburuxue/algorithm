@@ -11,13 +11,12 @@ function big_number($num1,$num2){
 	$char_index1 = strpos($num1,".")?:$len1;
 	$char_index2 = strpos($num2,".")?:$len2;
 	$diff = abs($diff1 - $diff2);
-	$char_index = $diff1 > $diff2 ? $diff1 : $diff2;
+	$char_index = max($diff1,$diff2);
 	if($diff1 > $diff2){
 		$num2 = str_pad($num2,$len2 + $diff,"0",STR_PAD_RIGHT);
 	}else{
 		$num1 = str_pad($num1,$len1 + $diff,"0",STR_PAD_RIGHT);
 	}
-
 	$num1 = str_replace(".","",$num1);
 	$num2 = str_replace(".","",$num2);
 	$len1 = strlen($num1);
