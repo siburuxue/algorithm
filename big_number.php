@@ -158,7 +158,7 @@ function big_number($number1,$type="+",$number2){
             if(!$flg){
                 $num = "-".$num;
             }
-        }
-        return $num;
+        }  
     }
+    return $num;
 }
